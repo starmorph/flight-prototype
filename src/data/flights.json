@@ -1,0 +1,402 @@
+[
+  {
+    "id": "UA-1234-20241215",
+    "airline": "United Airlines",
+    "airlineCode": "UA",
+    "flightNumber": "UA1234",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "3",
+      "gate": "A12"
+    },
+    "arrival": {
+      "airport": "John F. Kennedy International Airport",
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "4",
+      "gate": "B8"
+    },
+    "departureTime": "2024-12-15T08:30:00-08:00",
+    "arrivalTime": "2024-12-15T17:15:00-05:00",
+    "duration": 345,
+    "price": {
+      "base": 250,
+      "currency": "USD",
+      "taxes": 45,
+      "fees": 15,
+      "total": 310
+    },
+    "stops": 0,
+    "aircraft": {
+      "type": "Boeing 777-300ER",
+      "manufacturer": "Boeing",
+      "model": "777-300ER"
+    },
+    "class": "economy",
+    "baggage": {
+      "carryOn": true,
+      "checked": 1,
+      "weightLimit": 23
+    },
+    "amenities": ["WiFi", "Entertainment", "Meal", "Power Outlets"],
+    "bookingClass": "Y",
+    "availableSeats": 12,
+    "refundable": false,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T10:30:00Z"
+  },
+  {
+    "id": "DL-5678-20241215",
+    "airline": "Delta Air Lines",
+    "airlineCode": "DL",
+    "flightNumber": "DL5678",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "2",
+      "gate": "C15"
+    },
+    "arrival": {
+      "airport": "John F. Kennedy International Airport",
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "2",
+      "gate": "A22"
+    },
+    "departureTime": "2024-12-15T14:20:00-08:00",
+    "arrivalTime": "2024-12-15T23:05:00-05:00",
+    "duration": 345,
+    "price": {
+      "base": 280,
+      "currency": "USD",
+      "taxes": 50,
+      "fees": 20,
+      "total": 350
+    },
+    "stops": 0,
+    "aircraft": {
+      "type": "Airbus A330-900",
+      "manufacturer": "Airbus",
+      "model": "A330-900"
+    },
+    "class": "economy",
+    "baggage": {
+      "carryOn": true,
+      "checked": 1,
+      "weightLimit": 23
+    },
+    "amenities": ["WiFi", "Entertainment", "Meal", "Power Outlets", "Extra Legroom"],
+    "bookingClass": "M",
+    "availableSeats": 8,
+    "refundable": true,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T11:15:00Z"
+  },
+  {
+    "id": "AA-9012-20241215",
+    "airline": "American Airlines",
+    "airlineCode": "AA",
+    "flightNumber": "AA9012",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "1",
+      "gate": "B5"
+    },
+    "arrival": {
+      "airport": "John F. Kennedy International Airport",
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "8",
+      "gate": "C12"
+    },
+    "departureTime": "2024-12-15T11:45:00-08:00",
+    "arrivalTime": "2024-12-15T22:30:00-05:00",
+    "duration": 465,
+    "price": {
+      "base": 200,
+      "currency": "USD",
+      "taxes": 40,
+      "fees": 12,
+      "total": 252
+    },
+    "stops": 1,
+    "aircraft": {
+      "type": "Boeing 737-800",
+      "manufacturer": "Boeing",
+      "model": "737-800"
+    },
+    "class": "economy",
+    "baggage": {
+      "carryOn": true,
+      "checked": 1,
+      "weightLimit": 23
+    },
+    "amenities": ["WiFi", "Entertainment", "Snack"],
+    "bookingClass": "B",
+    "availableSeats": 15,
+    "refundable": false,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T09:45:00Z"
+  },
+  {
+    "id": "SW-3456-20241215",
+    "airline": "Southwest Airlines",
+    "airlineCode": "WN",
+    "flightNumber": "WN3456",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "1",
+      "gate": "A8"
+    },
+    "arrival": {
+      "airport": "LaGuardia Airport",
+      "airportCode": "LGA",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "B",
+      "gate": "12"
+    },
+    "departureTime": "2024-12-15T06:15:00-08:00",
+    "arrivalTime": "2024-12-15T15:45:00-05:00",
+    "duration": 390,
+    "price": {
+      "base": 180,
+      "currency": "USD",
+      "taxes": 35,
+      "fees": 0,
+      "total": 215
+    },
+    "stops": 1,
+    "aircraft": {
+      "type": "Boeing 737-700",
+      "manufacturer": "Boeing",
+      "model": "737-700"
+    },
+    "class": "economy",
+    "baggage": {
+      "carryOn": true,
+      "checked": 2,
+      "weightLimit": 23
+    },
+    "amenities": ["WiFi", "Snack", "Free Checked Bags"],
+    "bookingClass": "W",
+    "availableSeats": 22,
+    "refundable": true,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T08:20:00Z"
+  },
+  {
+    "id": "UA-7890-20241215",
+    "airline": "United Airlines",
+    "airlineCode": "UA",
+    "flightNumber": "UA7890",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "3",
+      "gate": "E18"
+    },
+    "arrival": {
+      "airport": "John F. Kennedy International Airport",
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "4",
+      "gate": "A5"
+    },
+    "departureTime": "2024-12-15T19:30:00-08:00",
+    "arrivalTime": "2024-12-16T04:15:00-05:00",
+    "duration": 345,
+    "price": {
+      "base": 320,
+      "currency": "USD",
+      "taxes": 55,
+      "fees": 18,
+      "total": 393
+    },
+    "stops": 0,
+    "aircraft": {
+      "type": "Boeing 787-9 Dreamliner",
+      "manufacturer": "Boeing",
+      "model": "787-9"
+    },
+    "class": "premium_economy",
+    "baggage": {
+      "carryOn": true,
+      "checked": 2,
+      "weightLimit": 23
+    },
+    "amenities": ["WiFi", "Entertainment", "Premium Meal", "Power Outlets", "Extra Legroom", "Priority Boarding"],
+    "bookingClass": "S",
+    "availableSeats": 6,
+    "refundable": true,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T12:00:00Z"
+  },
+  {
+    "id": "DL-2468-20241215",
+    "airline": "Delta Air Lines",
+    "airlineCode": "DL",
+    "flightNumber": "DL2468",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "2",
+      "gate": "D9"
+    },
+    "arrival": {
+      "airport": "John F. Kennedy International Airport",
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "2",
+      "gate": "B15"
+    },
+    "departureTime": "2024-12-15T10:00:00-08:00",
+    "arrivalTime": "2024-12-15T18:45:00-05:00",
+    "duration": 345,
+    "price": {
+      "base": 400,
+      "currency": "USD",
+      "taxes": 60,
+      "fees": 25,
+      "total": 485
+    },
+    "stops": 0,
+    "aircraft": {
+      "type": "Airbus A350-900",
+      "manufacturer": "Airbus",
+      "model": "A350-900"
+    },
+    "class": "business",
+    "baggage": {
+      "carryOn": true,
+      "checked": 2,
+      "weightLimit": 32
+    },
+    "amenities": ["WiFi", "Entertainment", "Gourmet Meal", "Lie-Flat Seats", "Priority Boarding", "Lounge Access"],
+    "bookingClass": "J",
+    "availableSeats": 4,
+    "refundable": true,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T13:30:00Z"
+  },
+  {
+    "id": "AA-1357-20241215",
+    "airline": "American Airlines",
+    "airlineCode": "AA",
+    "flightNumber": "AA1357",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "1",
+      "gate": "C22"
+    },
+    "arrival": {
+      "airport": "John F. Kennedy International Airport",
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "8",
+      "gate": "A18"
+    },
+    "departureTime": "2024-12-15T16:45:00-08:00",
+    "arrivalTime": "2024-12-16T01:30:00-05:00",
+    "duration": 345,
+    "price": {
+      "base": 220,
+      "currency": "USD",
+      "taxes": 42,
+      "fees": 14,
+      "total": 276
+    },
+    "stops": 0,
+    "aircraft": {
+      "type": "Boeing 777-200ER",
+      "manufacturer": "Boeing",
+      "model": "777-200ER"
+    },
+    "class": "economy",
+    "baggage": {
+      "carryOn": true,
+      "checked": 1,
+      "weightLimit": 23
+    },
+    "amenities": ["WiFi", "Entertainment", "Meal", "Power Outlets"],
+    "bookingClass": "H",
+    "availableSeats": 18,
+    "refundable": false,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T14:15:00Z"
+  },
+  {
+    "id": "UA-9753-20241215",
+    "airline": "United Airlines",
+    "airlineCode": "UA",
+    "flightNumber": "UA9753",
+    "departure": {
+      "airport": "San Francisco International Airport",
+      "airportCode": "SFO",
+      "city": "San Francisco",
+      "country": "United States",
+      "terminal": "3",
+      "gate": "F3"
+    },
+    "arrival": {
+      "airport": "John F. Kennedy International Airport",
+      "airportCode": "JFK",
+      "city": "New York",
+      "country": "United States",
+      "terminal": "4",
+      "gate": "C7"
+    },
+    "departureTime": "2024-12-15T13:15:00-08:00",
+    "arrivalTime": "2024-12-15T21:00:00-05:00",
+    "duration": 345,
+    "price": {
+      "base": 290,
+      "currency": "USD",
+      "taxes": 48,
+      "fees": 16,
+      "total": 354
+    },
+    "stops": 0,
+    "aircraft": {
+      "type": "Boeing 737 MAX 9",
+      "manufacturer": "Boeing",
+      "model": "737 MAX 9"
+    },
+    "class": "economy",
+    "baggage": {
+      "carryOn": true,
+      "checked": 1,
+      "weightLimit": 23
+    },
+    "amenities": ["WiFi", "Entertainment", "Meal", "Power Outlets", "USB Charging"],
+    "bookingClass": "K",
+    "availableSeats": 9,
+    "refundable": false,
+    "changeable": true,
+    "lastUpdated": "2024-12-01T15:45:00Z"
+  }
+]
