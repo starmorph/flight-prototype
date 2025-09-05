@@ -13,7 +13,7 @@ export default function AboutCard() {
       <Card>
         <CardHeader>
           <CardTitle>Flight Planner Demo</CardTitle>
-          <CardDescription></CardDescription>
+          <CardDescription> This repo demonstrates returning flight text data with natural language. It utilizes a JSON store of flight data, with types to describe the structure of the JSON. I then use a Vercel AI SDK tool function for searching and returning the correct flights according to the query.</CardDescription>
         </CardHeader>
         <CardContent className="text-sm text-muted-foreground/90 leading-normal prose"> 
 

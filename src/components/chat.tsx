@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { IconArrowUp } from '@/components/ui/icons';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Plane, Search, Clock, DollarSign, MapPin, Sparkles, Zap, TrendingUp } from "lucide-react";
+import { Plane, Search, Clock, DollarSign, MapPin, Sparkles, Zap, TrendingUp, PictureInPicture } from "lucide-react";
 import  Link from "next/link";
 import AboutCard from "@/components/cards/aboutcard";
 export const maxDuration = 30;
@@ -82,8 +82,8 @@ export default function Chat() {
                     variant="secondary"
                     className="text-xs font-semibold px-2 py-1 bg-accent/100 text-accent-foreground border-accent/30"
                   >
-                    <TrendingUp className="h-3 w-3 mr-1" />
-                    Live
+                    <PictureInPicture className="h-3 w-3 mr-1" />
+                    Design Preview
                   </Badge>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function Chat() {
                 <Select value={filters.maxPrice} onValueChange={(value) => setFilters({ ...filters, maxPrice: value })}>
                   <SelectTrigger className="h-12 rounded-xl border-border/50 hover:border-primary/50 transition-colors bg-background/50 backdrop-blur-sm">
                     <div className="flex items-center gap-2">
-                      <div className="p-1.5 bg-primary/10 rounded-lg">
+                      <div className="p-1.5 bg-accent/100 rounded-lg">
                         <DollarSign className="h-4 w-4 text-primary" />
                       </div>
                       <SelectValue placeholder="Budget" />
@@ -109,8 +109,8 @@ export default function Chat() {
                 <Select value={filters.airline} onValueChange={(value) => setFilters({ ...filters, airline: value })}>
                   <SelectTrigger className="h-12 rounded-xl border-border/50 hover:border-primary/50 transition-colors bg-background/50 backdrop-blur-sm">
                     <div className="flex items-center gap-2">
-                      <div className="p-1.5 bg-accent/10 rounded-lg">
-                        <Plane className="h-4 w-4 text-accent" />
+                      <div className="p-1.5 bg-accent/100 rounded-lg">
+                        <Plane className="h-4 w-4 text-accent/200" />
                       </div>
                       <SelectValue placeholder="Carrier" />
                     </div>
@@ -126,7 +126,7 @@ export default function Chat() {
                 <Select value={filters.stops} onValueChange={(value) => setFilters({ ...filters, stops: value })}>
                   <SelectTrigger className="h-12 rounded-xl border-border/50 hover:border-primary/50 transition-colors bg-background/50 backdrop-blur-sm">
                     <div className="flex items-center gap-2">
-                      <div className="p-1.5 bg-primary/10 rounded-lg">
+                      <div className="p-1.5 bg-accent/100 rounded-lg">
                         <MapPin className="h-4 w-4 text-primary" />
                       </div>
                       <SelectValue placeholder="Journey" />
@@ -142,8 +142,8 @@ export default function Chat() {
                 <Select value={filters.duration} onValueChange={(value) => setFilters({ ...filters, duration: value })}>
                   <SelectTrigger className="h-12 rounded-xl border-border/50 hover:border-primary/50 transition-colors bg-background/50 backdrop-blur-sm">
                     <div className="flex items-center gap-2">
-                      <div className="p-1.5 bg-accent/10 rounded-lg">
-                        <Clock className="h-4 w-4 text-accent" />
+                      <div className="p-1.5 bg-accent/100 rounded-lg">
+                        <Clock className="h-4 w-4 text-accent/200" />
                       </div>
                       <SelectValue placeholder="Duration" />
                     </div>

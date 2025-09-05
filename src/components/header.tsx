@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
 import { IconSeparator, IconVercel } from '@/components/ui/icons'
 import EnvCard from './cards/envcard'
+import { GitBranch, Github } from 'lucide-react'
 
 export async function Header() {
   return (
@@ -13,6 +14,12 @@ export async function Header() {
         Flight Planner
       </Link>
       <IconSeparator />
+      <Link
+        href="/genui"
+        className={cn(buttonVariants({ variant: 'link' }), "mr-auto font-normal")}
+      >
+        <span className="hidden md:flex">GenUI</span>
+      </Link>
 
     </header>
   )

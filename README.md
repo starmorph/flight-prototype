@@ -9,7 +9,7 @@ This project showcases my ability to build production-ready, AI-enhanced applica
 ### Core Functionality
 - **Intelligent Flight Search**: Natural language queries processed by GPT-4 Turbo
 - **Advanced Filtering**: Price, airline, stops, duration, cities, and more
-- **Smart Sorting**: UI Design only - not functioning atm, out of scope of coding challenge
+- **Smart Sorting**: UI Design only - not functioning atm, out of scope of coding challenge 
 - **Real-time Results**: Instant search results with streaming AI responses
 
 ### Search Capabilities
