@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Cloud, Sun, Droplets, Wind, ChevronDown, ChevronUp } from 'lucide-react'
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
@@ -38,21 +38,42 @@ interface Forecast {
   };
 }
 
-export async function Weather({ city, unit }: WeatherProps) {
+export function Weather({ city, unit }: WeatherProps) {
   const [useCelsius, setUseCelsius] = useState(false);
   const [showFullForecast, setShowForecast] = useState(false);
   const [forecastDays, setForecastDays] = useState(2);
-  const getLatLong = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`)
-  const getLatLongData = await getLatLong.json()
-  const lat = getLatLongData[0].lat;
-  const long = getLatLongData[0].lon;
-  // If you get rate limited try hardcoding in Austin // const lat = 30.2672; // const long = -97.7431;
-  const pointResponse = await fetch(`https://api.weather.gov/points/${lat},${long}`)
-  if (!pointResponse.ok) throw new Error('Failed to fetch weather point')
-  const pointData: WeatherPoint = await pointResponse.json()
-  const forecastResponse = await fetch(pointData.properties.forecast)
-  if (!forecastResponse.ok) throw new Error('Failed to fetch forecast')
-  const forecastData: Forecast = await forecastResponse.json()
+  const [forecastData, setForecastData] = useState<Forecast | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const getLatLong = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`)
+        const getLatLongData = await getLatLong.json()
+        const lat = getLatLongData[0].lat;
+        const long = getLatLongData[0].lon;
+        // If you get rate limited try hardcoding in Austin // const lat = 30.2672; // const long = -97.7431;
+        const pointResponse = await fetch(`https://api.weather.gov/points/${lat},${long}`)
+        if (!pointResponse.ok) throw new Error('Failed to fetch weather point')
+        const pointData: WeatherPoint = await pointResponse.json()
+        const forecastResponse = await fetch(pointData.properties.forecast)
+        if (!forecastResponse.ok) throw new Error('Failed to fetch forecast')
+        const weatherData: Forecast = await forecastResponse.json()
+        
+        setForecastData(weatherData);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch weather data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchWeatherData();
+  }, [city]);
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' })
   }
@@ -67,6 +88,32 @@ export async function Weather({ city, unit }: WeatherProps) {
   const convertToCelsius = (current: number) => {
     return Math.round((current - 32) * 5 / 9);
   };
+
+  if (loading) {
+    return (
+      <div className="min-w-full mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg overflow-hidden" key={`${city}-${unit}`}>
+        <div className="px-6 py-8 text-center">
+          <h2 className="text-4xl font-bold text-white">{city}</h2>
+          <p className="text-blue-100 mt-4">Loading weather data...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-w-full mx-auto bg-gradient-to-br from-red-500 to-red-600 rounded-xl shadow-lg overflow-hidden" key={`${city}-${unit}`}>
+        <div className="px-6 py-8 text-center">
+          <h2 className="text-4xl font-bold text-white">{city}</h2>
+          <p className="text-red-100 mt-4">Error: {error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!forecastData) {
+    return null;
+  }
 
   return (
     <div className="min-w-full mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg overflow-hidden" key={`${city}-${unit}`}>

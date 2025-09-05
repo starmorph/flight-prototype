@@ -40,9 +40,8 @@ export default function Chat() {
                 {message.content as string}
                 {message.toolInvocations && message.toolInvocations.map((toolInvocation, toolIndex) => (
                   <div key={toolIndex} className="mt-2 p-2 bg-gray-100 rounded">
-                    {toolInvocation.result && (
-                      <div className="whitespace-pre-wrap">{toolInvocation.result}</div>
-                    )}
+                    {/* Tool invocation result will be displayed here when available */}
+                    <div className="text-sm text-gray-600">Tool executed: {toolInvocation.toolName || 'Unknown tool'}</div>
                   </div>
                 ))}
               </div>

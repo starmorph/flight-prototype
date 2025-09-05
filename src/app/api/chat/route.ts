@@ -153,9 +153,5 @@ ${flight.amenities.length > 0 ? `✨ ${flight.amenities.join(', ')}` : ''}
     },
   });
 
-  return result.toDataStreamResponse({
-    onFinish: async (result) => {
-      console.log('Stream finished:', result);
-    },
-  });
+  return result.toDataStreamResponse();
 }
