@@ -6,7 +6,7 @@ import { Header } from "@/components/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js AI Lite App",
+  title: "Flight Planner",
   description: "AI with Next and AI SDK",
 };
 

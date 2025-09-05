@@ -40,8 +40,15 @@ export default function Chat() {
                 {message.content as string}
                 {message.toolInvocations && message.toolInvocations.map((toolInvocation, toolIndex) => (
                   <div key={toolIndex} className="mt-2 p-2 bg-gray-100 rounded">
-                    {/* Tool invocation result will be displayed here when available */}
-                    <div className="text-sm text-gray-600">Tool executed: {toolInvocation.toolName || 'Unknown tool'}</div>
+                    {toolInvocation.state === 'result' && (toolInvocation as any).result ? (
+                      <div className="whitespace-pre-wrap text-sm">{(toolInvocation as any).result}</div>
+                    ) : toolInvocation.state === 'partial-call' ? (
+                      <div className="text-sm text-gray-600">Executing tool: {toolInvocation.toolName}...</div>
+                    ) : toolInvocation.state === 'call' ? (
+                      <div className="text-sm text-gray-600">Calling tool: {toolInvocation.toolName}...</div>
+                    ) : (
+                      <div className="text-sm text-gray-600">Tool executed: {toolInvocation.toolName || 'Unknown tool'}</div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -73,7 +80,7 @@ export default function Chat() {
                 <div className="flex items-center space-x-2">
                   <Badge
                     variant="secondary"
-                    className="text-xs font-semibold px-2 py-1 bg-accent/20 text-accent-foreground border-accent/30"
+                    className="text-xs font-semibold px-2 py-1 bg-accent/100 text-accent-foreground border-accent/30"
                   >
                     <TrendingUp className="h-3 w-3 mr-1" />
                     Live
