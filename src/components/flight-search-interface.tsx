@@ -160,7 +160,7 @@ export default function FlightSearchInterface() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    
+
 
         <Card className="mb-12 shadow-2xl border-0 glass-effect overflow-hidden">
           <CardHeader className="pb-6">
@@ -352,11 +352,11 @@ export default function FlightSearchInterface() {
           <div className="text-center py-20">
             <div className="mb-8">
               <div className="relative inline-flex">
-            
+
 
               </div>
             </div>
-            
+
           </div>
         )}
       </main>
