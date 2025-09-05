@@ -14,12 +14,7 @@ export async function Header() {
         Flight Planner
       </Link>
       <IconSeparator />
-      <Link
-        href="/genui"
-        className={cn(buttonVariants({ variant: 'link' }), "mr-auto font-normal")}
-      >
-        <span className="hidden md:flex">GenUI</span>
-      </Link>
+ 
 
     </header>
   )
